@@ -111,11 +111,6 @@ for i = 1, length do
 	turtle.forward()
 	turtle.digUp()
 	turtle.digDown()
-	turtle.turnRight()
-	turtle.dig()
-	turtle.forward()
-	turtle.digUp()
-	turtle.digDown()
 	
 end
 
