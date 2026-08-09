@@ -2,7 +2,7 @@ local args = {...}
 local length = tonumber(args[1])
  
 if not length then
-    print("Benutzung: " .. shell.getRunningProgram() .. " <Länge>")
+    print("Benutzung: " .. shell.getRunningProgram() .. " <Laenge>")
     return
 end
 
