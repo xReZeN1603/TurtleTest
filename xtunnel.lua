@@ -6,28 +6,31 @@ if not length then
     return
 end
 
+	turtle.dig()
+	turtle.forward()
+	turtle.digUp()
+	turtle.digDown()
+	turtle.turnLeft()
+	turtle.dig()
+	turtle.forward()
+	turtle.digUp()
+	turtle.digDown()
+	turtle.dig()
+	turtle.forward()
+	turtle.digUp()
+	turtle.digDown()
+	turtle.dig()
+	turtle.forward()
+	turtle.digUp()
+	turtle.digDown()
+	turtle.dig()
+	turtle.forward()
+	turtle.digUp()
+	turtle.digDown()
+
 for i = 1, length do
-	turtle.dig()
-	turtle.forward()
-	turtle.digUp()
-	turtle.digDown()
-	turtle.turnLeft()
-	turtle.dig()
-	turtle.forward()
-	turtle.digUp()
-	turtle.digDown()
-	turtle.dig()
-	turtle.forward()
-	turtle.digUp()
-	turtle.digDown()
-	turtle.dig()
-	turtle.forward()
-	turtle.digUp()
-	turtle.digDown()
-	turtle.dig()
-	turtle.forward()
-	turtle.digUp()
-	turtle.digDown()
+	
+	
 	
 	turtle.turnRight()
 	turtle.dig()
@@ -109,6 +112,10 @@ for i = 1, length do
 	turtle.digUp()
 	turtle.digDown()
 	turtle.turnRight()
+	turtle.dig()
+	turtle.forward()
+	turtle.digUp()
+	turtle.digDown()
 	
 end
 
