@@ -28,8 +28,9 @@ end
 	turtle.digUp()
 	turtle.digDown()
 
+print("Länge erkannt: " .. length)
 for i = 1, length do
-	
+    print("Durchlauf: " .. i .. " / " .. length)	
 	
 	
 	turtle.turnRight()
