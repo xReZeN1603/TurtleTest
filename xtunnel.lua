@@ -95,6 +95,60 @@ print("Durchlauf: " .. i .. " / " .. length)
         digUpDown()
     end
 
+--Alle 10 Durchlaeufe Inventar leeren
+    if i % 10 == 0 then
+        
+        print("10 Durchlaeufe erreicht!")
+        print("Inventar wird geleert.")
+        
+--!!!!RUECKWEG EINBAUEN!!!!
+        turtle.turnRight()
+        sleep(0.3)
+        turtle.turnRight()
+
+        for j = 1, 4 do
+            turtle.forward()
+            sleep(0.3)
+        end
+
+        turtle.turnRight()
+        sleep(0.3)
+
+        for j = 1, i do
+            turtle.forward()
+            sleep(0.3)
+        end
+
+        turtle.turnLeft()
+        sleep(0.3)
+        turtle.turnLeft()
+        sleep(0.3)
+--
+        
+        for slot = 1,16 do 
+            turtle.select(slot)
+            turtle.drop()
+            sleep(0.3)
+        end
+
+        turtle.select(1)
+        print("Inventar geleert.")
+
+        for j = 1, i do
+            turtle.forward()
+            sleep(0.3)
+        end
+
+        turtle.turnLeft()
+        sleep(0.3)
+
+        for j = 1, 4 do
+            turtle.forward()
+            sleep(0.3)
+        end
+        
+    end
+    
 end
 
 print("Fertig!")
