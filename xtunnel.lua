@@ -64,7 +64,7 @@ for j = 1, 4 do
     digUpDown()
 end
 
-print("Länge erkannt: " .. length)
+print("Vorbereitung abgeschlossen, beginne Tunnel")
 
 --Wiederholungen im Schlangenmuster LENGTH
 for i = 1, length / 2 do --LAENGE CHECKEN!!
@@ -83,7 +83,7 @@ print("Durchlauf: " .. i .. " / " .. length)
         digUpDown()
     end
 
-print("Durchlauf: " .. i + 1 .. " / " .. length)
+print("Durchlauf: " .. i .. " / " .. length)
 
     turtle.turnLeft()
     sleep(0.3)
