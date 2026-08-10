@@ -67,7 +67,7 @@ end
 print("Länge erkannt: " .. length)
 
 --Wiederholungen im Schlangenmuster LENGTH
-for i = 1, length - 1 do
+for i = 1, length / 2 do
 
 print("Durchlauf: " .. i .. " / " .. length)
 
