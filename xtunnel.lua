@@ -71,7 +71,7 @@ end
 print("Vorbereitung abgeschlossen, beginne Tunnel")
 
 --Wiederholungen im Schlangenmuster LENGTH
-for i = 1, math.ceil((length - 1) / 2) do --LAENGE CHECKEN!!
+for i = 1, math.ceil((length - 1) / 2) do 
 
     count = count + 1
     print("Durchlauf: " .. count .. " / " .. length)
@@ -104,12 +104,10 @@ for i = 1, math.ceil((length - 1) / 2) do --LAENGE CHECKEN!!
         digMove()
         digUpDown()
     end
-end --<
 -- ------------------------
 
 --Alle 10 Durchlaeufe Inventar leeren
-for --<
-    if count % 2 == 0 or count == length then
+    if count % 20 == 1 or count == length * 2 - 1 then
         
         print("" .. count .. " Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
@@ -121,7 +119,7 @@ for --<
         sleep(0.3)
 
         for j = 1, 4 do
-            turtle.forward()
+            digMove()
             sleep(0.3)
         end
 
@@ -129,7 +127,7 @@ for --<
         sleep(0.3)
 
         for j = 1, i * 2 do
-            turtle.forward()
+            digMove()
             sleep(0.3)
         end
 
@@ -137,7 +135,7 @@ for --<
         sleep(0.3)
         turtle.forward()
         sleep(0.3)
---
+
     --Items abladen
         for slot = 1, 16 do 
             turtle.select(slot)
@@ -161,7 +159,7 @@ for --<
             sleep(0.3)
 
             for j = 1, i * 2 do
-                turtle.forward()
+                digMove()
                 sleep(0.3)
             end
 
@@ -169,7 +167,7 @@ for --<
             sleep(0.3)
 
             for j = 1, 4 do
-                turtle.forward()
+                digMove()
                 sleep(0.3)
             end
 
