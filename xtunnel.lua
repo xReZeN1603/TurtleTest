@@ -71,7 +71,7 @@ end
 print("Vorbereitung abgeschlossen, beginne Tunnel")
 
 --Wiederholungen im Schlangenmuster LENGTH
-for i = 1, math.ceil((length - 1) / 2 do --LAENGE CHECKEN!!
+for i = 1, math.ceil((length - 1) / 2) do --LAENGE CHECKEN!!
 
     count = count + 1
     print("Durchlauf: " .. count .. " / " .. length)
