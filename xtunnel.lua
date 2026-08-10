@@ -105,7 +105,7 @@ for i = 1, length -1 / 2 do --LAENGE CHECKEN!!
         print(" " .. count .. " Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
         
---!!!!RUECKWEG EINBAUEN!!!!
+--!!!!Rueckweg zur Chest!!!!
         turtle.turnRight()
         sleep(0.3)
         turtle.turnRight()
@@ -129,7 +129,7 @@ for i = 1, length -1 / 2 do --LAENGE CHECKEN!!
         turtle.forward()
         sleep(0.3)
 --
-        
+    --Items abladen
         for slot = 1, 16 do 
             turtle.select(slot)
             turtle.drop()
@@ -139,26 +139,35 @@ for i = 1, length -1 / 2 do --LAENGE CHECKEN!!
         turtle.select(1)
         print("Inventar geleert.")
 
-        turtle.turnLeft()
-        sleep(0.3)
-        turtle.turnLeft()
-        sleep(0.3)
-        turtle.up()
-        sleep(0.3)
-        turtle.forward()
-        sleep(0.3)
+    --Zurueck, wenn durchlaeufe uebrig
+        if count < length then
 
-        for j = 1, i * 2 do
+            turtle.turnLeft()
+            sleep(0.3)
+            turtle.turnLeft()
+            sleep(0.3)
+            turtle.up()
+            sleep(0.3)
             turtle.forward()
             sleep(0.3)
-        end
 
-        turtle.turnLeft()
-        sleep(0.3)
+            for j = 1, i * 2 do
+                turtle.forward()
+                sleep(0.3)
+            end
 
-        for j = 1, 4 do
-            turtle.forward()
+            turtle.turnLeft()
             sleep(0.3)
+
+            for j = 1, 4 do
+                turtle.forward()
+                sleep(0.3)
+            end
+        --Bei Chest bleiben, wenn keine durchlaeufe mehr
+        else
+            
+            print("Tunnel fertig!")
+            
         end
 
         print("Rueckweg abgeschlossen.")
