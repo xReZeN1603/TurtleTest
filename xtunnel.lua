@@ -71,7 +71,7 @@ end
 print("Vorbereitung abgeschlossen, beginne Tunnel")
 
 --Wiederholungen im Schlangenmuster LENGTH
-for i = 1, (length -1) / 2 do --LAENGE CHECKEN!!
+for i = 1, math.ceil((length - 1) / 2 do --LAENGE CHECKEN!!
 
     count = count + 1
     print("Durchlauf: " .. count .. " / " .. length)
@@ -87,21 +87,26 @@ for i = 1, (length -1) / 2 do --LAENGE CHECKEN!!
         digMove()
         digUpDown()
     end
+-- ------------------------
+    if count < length then
+    
 
-    count = count + 1
-    print("Durchlauf: " .. count .. " / " .. length)
+        count = count + 1
+        print("Durchlauf: " .. count .. " / " .. length)
 
-    turtle.turnLeft()
-    sleep(0.3)
-    digMove()
-    digUpDown()
-    turtle.turnLeft()
-    sleep(0.3)
-
-    for j = 1, 8 do
+        turtle.turnLeft()
+        sleep(0.3)
         digMove()
         digUpDown()
+        turtle.turnLeft()
+        sleep(0.3)
+
+        for j = 1, 8 do
+            digMove()
+            digUpDown()
+        end
     end
+-- ------------------------
 
 --Alle 10 Durchlaeufe Inventar leeren
     if count % 10 == 0 or count == length then
