@@ -106,7 +106,7 @@ for i = 1, (length -1) / 2 do --LAENGE CHECKEN!!
 --Alle 10 Durchlaeufe Inventar leeren
     if count % 2 == 0 or count == length then
         
-        print(" " .. count .. " Durchlaeufe erreicht!")
+        print("" .. count .. " Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
         
 --!!!!Rueckweg zur Chest!!!!
@@ -167,6 +167,9 @@ for i = 1, (length -1) / 2 do --LAENGE CHECKEN!!
                 turtle.forward()
                 sleep(0.3)
             end
+
+            print("Rueckweg abgeschlossen.")
+            
         --Bei Chest bleiben, wenn keine durchlaeufe mehr
         else
             
@@ -174,8 +177,6 @@ for i = 1, (length -1) / 2 do --LAENGE CHECKEN!!
             
         end
 
-        print("Rueckweg abgeschlossen.")
-        
     end
     
 end
