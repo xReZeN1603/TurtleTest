@@ -115,15 +115,15 @@ print("Durchlauf: " .. i .. " / " .. length)
         turtle.turnRight()
         sleep(0.3)
 
-        for j = 1, i do
+        for j = 1, i * 2 do
             turtle.forward()
             sleep(0.3)
         end
 
-        turtle.turnLeft()
-        sleep(0.3)
-        turtle.turnLeft()
-        sleep(0.3)
+       -- turtle.turnLeft()
+       -- sleep(0.3)
+       -- turtle.turnLeft()
+       -- sleep(0.3)
 --
         
         for slot = 1,16 do 
@@ -135,7 +135,7 @@ print("Durchlauf: " .. i .. " / " .. length)
         turtle.select(1)
         print("Inventar geleert.")
 
-        for j = 1, i do
+        for j = 1, i * 2 do
             turtle.forward()
             sleep(0.3)
         end
