@@ -35,7 +35,12 @@ end
 
 --Einleitung, faehrt vor und zerstoert 4 Bloecke nach rechts und 4 Bloecke nach links
 digMove()
-digUpDown()
+turtle.digUp()
+sleep(0.3)
+turtle.up()
+sleep(0.3)
+turtle.digUp()
+sleep(0.3)
 
 turtle.turnRight()
 sleep(0.3)
@@ -46,11 +51,15 @@ end
 
 turtle.turnLeft()
 sleep(0.3)
-digMove()
-digUpDown()
 turtle.turnLeft()
+sleep(0.3)
 
-for j = 1, 8 do
+for j = 1, 4 do
+    turtle.forward()
+    sleep(0.3)
+end
+
+for j = 1, 4 do
     digMove()
     digUpDown()
 end
@@ -58,7 +67,7 @@ end
 print("Länge erkannt: " .. length)
 
 --Wiederholungen im Schlangenmuster LENGTH
-for i = 1, length do
+for i = 1, length - 1 do
 
 print("Durchlauf: " .. i .. " / " .. length)
 
