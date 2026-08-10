@@ -83,6 +83,8 @@ print("Durchlauf: " .. i .. " / " .. length)
         digUpDown()
     end
 
+print("Durchlauf: " .. i + 1 .. " / " .. length)
+
     turtle.turnLeft()
     sleep(0.3)
     digMove()
