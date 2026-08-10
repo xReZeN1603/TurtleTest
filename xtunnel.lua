@@ -88,28 +88,28 @@ for i = 1, math.ceil((length - 1) / 2) do --LAENGE CHECKEN!!
         digUpDown()
     end
 -- ------------------------
-    if count < length then
-    
 
-        count = count + 1
-        print("Durchlauf: " .. count .. " / " .. length)
 
-        turtle.turnLeft()
-        sleep(0.3)
+    count = count + 1
+    print("Durchlauf: " .. count .. " / " .. length)
+
+    turtle.turnLeft()
+    sleep(0.3)
+    digMove()
+    digUpDown()
+    turtle.turnLeft()
+    sleep(0.3)
+
+    for j = 1, 8 do
         digMove()
         digUpDown()
-        turtle.turnLeft()
-        sleep(0.3)
-
-        for j = 1, 8 do
-            digMove()
-            digUpDown()
-        end
     end
+end --<
 -- ------------------------
 
 --Alle 10 Durchlaeufe Inventar leeren
-    if count % 10 == 0 or count == length then
+for --<
+    if count % 2 == 0 or count == length then
         
         print("" .. count .. " Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
