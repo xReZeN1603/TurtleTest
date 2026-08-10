@@ -67,7 +67,7 @@ end
 print("Länge erkannt: " .. length)
 
 --Wiederholungen im Schlangenmuster LENGTH
-for i = 1, length -1 do
+for i = 1, length / 2 do --LAENGE CHECKEN!!
 
 print("Durchlauf: " .. i .. " / " .. length)
 
@@ -105,6 +105,7 @@ print("Durchlauf: " .. i .. " / " .. length)
         turtle.turnRight()
         sleep(0.3)
         turtle.turnRight()
+        sleep(0.3)
 
         for j = 1, 4 do
             turtle.forward()
