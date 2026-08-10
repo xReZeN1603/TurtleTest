@@ -3,7 +3,7 @@
 
 local args = {...}
 local length = tonumber(args[1])
-
+local count = 0
 
 --Wartet bis abgebaut ist, faehrt 1 vor
 local function digMove()
@@ -69,7 +69,8 @@ print("Vorbereitung abgeschlossen, beginne Tunnel")
 --Wiederholungen im Schlangenmuster LENGTH
 for i = 1, length / 2 do --LAENGE CHECKEN!!
 
-print("Durchlauf: " .. i .. " / " .. length)
+    count = count + 1
+    print("Durchlauf: " .. count .. " / " .. length)
 
     turtle.turnRight()
     sleep(0.3)
@@ -83,7 +84,8 @@ print("Durchlauf: " .. i .. " / " .. length)
         digUpDown()
     end
 
-print("Durchlauf: " .. i .. " / " .. length)
+    count = count + 1
+    print("Durchlauf: " .. count .. " / " .. length)
 
     turtle.turnLeft()
     sleep(0.3)
@@ -98,7 +100,7 @@ print("Durchlauf: " .. i .. " / " .. length)
     end
 
 --Alle 10 Durchlaeufe Inventar leeren
-    if i % 2 == 0 then
+    if count % 2 == 0 then
         
         print("10 Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
