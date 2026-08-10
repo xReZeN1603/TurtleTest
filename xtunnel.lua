@@ -39,7 +39,7 @@ digUpDown()
 
 turtle.turnRight()
 sleep(0.3)
-for i = 1, 4 do
+for j = 1, 4 do
     digMove()
     digUpDown()
 end
@@ -50,7 +50,7 @@ digMove()
 digUpDown()
 turtle.turnLeft()
 
-for i = 1, 8 do
+for j = 1, 8 do
     digMove()
     digUpDown()
 end
@@ -69,7 +69,7 @@ print("Durchlauf: " .. i .. " / " .. length)
     turtle.turnRight()
     sleep(0.3)
 
-    for i = 1, 8 do
+    for j = 1, 8 do
         digMove()
         digUpDown()
     end
@@ -81,7 +81,7 @@ print("Durchlauf: " .. i .. " / " .. length)
     turtle.turnLeft()
     sleep(0.3)
 
-    for i = 1, 8 do
+    for j = 1, 8 do
         digMove()
         digUpDown()
     end
