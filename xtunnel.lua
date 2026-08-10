@@ -35,7 +35,7 @@ end
 
 --Einleitung, faehrt vor und zerstoert 4 Bloecke nach rechts und 4 Bloecke nach links
 print("Beginne Tunnel")
-print("Durchlauf: 1" " / " .. length)
+print("Durchlauf: 1 / " .. length)
 sleep(0.3)
 
 digMove()
