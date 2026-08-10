@@ -96,7 +96,7 @@ print("Durchlauf: " .. i .. " / " .. length)
     end
 
 --Alle 10 Durchlaeufe Inventar leeren
-    if i % 10 == 0 then
+    if i % 2 == 0 then
         
         print("10 Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
