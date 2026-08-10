@@ -102,7 +102,7 @@ for i = 1, length -1 / 2 do --LAENGE CHECKEN!!
 --Alle 10 Durchlaeufe Inventar leeren
     if count % 2 == 0 then
         
-        print(.. count .. "Durchlaeufe erreicht!")
+        print("" .. count .. "Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
         
 --!!!!RUECKWEG EINBAUEN!!!!
