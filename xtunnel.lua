@@ -67,7 +67,7 @@ end
 print("Länge erkannt: " .. length)
 
 --Wiederholungen im Schlangenmuster LENGTH
-for i = 1, length / 2 do
+for i = 1, length -1 do
 
 print("Durchlauf: " .. i .. " / " .. length)
 
@@ -146,6 +146,8 @@ print("Durchlauf: " .. i .. " / " .. length)
             turtle.forward()
             sleep(0.3)
         end
+
+        print("Rueckweg abgeschlossen.")
         
     end
     
