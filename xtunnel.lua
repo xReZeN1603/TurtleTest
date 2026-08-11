@@ -105,11 +105,11 @@ for i = 1, length / 2 do
     end
 -- ------------------------
 
-
+-- <<<<<<
     
 end
 
-if count < length then
+if count <= length then
 
 count = count + 1
     print("Durchlauf: " .. count .. " / " .. length)
@@ -125,7 +125,6 @@ count = count + 1
         digMove()
         digUpDown()
     end
-end
 
 --Alle 10 Durchlaeufe Inventar leeren
     if count % 10 == 0 or count == length then
@@ -202,5 +201,6 @@ end
         end
 
     end
+end
 
 print("Fertig!")
