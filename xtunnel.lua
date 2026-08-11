@@ -11,8 +11,6 @@ local function digMove()
     sleep(0.3)
 
     while not turtle.forward() do
-        turtle.attack()
-        sleep(0.3)
         turtle.dig()
         sleep(0.3)
     end
