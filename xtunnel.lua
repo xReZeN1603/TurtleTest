@@ -47,6 +47,7 @@ sleep(0.3)
 
 turtle.turnRight()
 sleep(0.3)
+
 for j = 1, 4 do
     digMove()
     digUpDown()
@@ -73,7 +74,7 @@ print("Vorbereitung abgeschlossen")
 for i = 1, length / 2 do 
 
     count = count + 1
-    print("Durchlauf: " .. count .. " / " .. length)
+    print("Durchlauf: " .. count .. " / " .. length - 1)
 
     turtle.turnRight()
     sleep(0.3)
@@ -89,7 +90,7 @@ for i = 1, length / 2 do
 -- ------------------------
 
     count = count + 1
-    print("Durchlauf: " .. count .. " / " .. length)
+    print("Durchlauf: " .. count .. " / " .. length -1)
 
     turtle.turnLeft()
     sleep(0.3)
