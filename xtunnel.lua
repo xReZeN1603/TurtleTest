@@ -90,8 +90,8 @@ for i = 1, math.ceil((length - 1) / 2) do
 -- ------------------------
 
 
-    count = count + 1
-    print("Durchlauf: " .. count .. " / " .. length)
+    --count = count + 1
+    --print("Durchlauf: " .. count .. " / " .. length)
 
     turtle.turnLeft()
     sleep(0.3)
@@ -107,7 +107,7 @@ for i = 1, math.ceil((length - 1) / 2) do
 -- ------------------------
 
 --Alle 10 Durchlaeufe Inventar leeren
-    if count % 20 == 19 or count == length * 2 - 1 then
+    if count % 2 == 0 or count == length then
         
         print("" .. count .. " Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
