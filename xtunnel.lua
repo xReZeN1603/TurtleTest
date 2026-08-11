@@ -3,7 +3,7 @@
 
 local args = {...}
 local length = tonumber(args[1])
-local count = 1
+local count = 0
 
 --Wartet bis abgebaut ist, faehrt 1 vor
 local function digMove()
@@ -74,7 +74,7 @@ print("Vorbereitung abgeschlossen, beginne Tunnel")
 for i = 1, (length - 1) / 2 do 
 
     count = count + 1
-    print("Durchlauf: " .. count .. " / " .. length)
+    print("Durchlauf: " .. count + 1 .. " / " .. length)
 
     turtle.turnRight()
     sleep(0.3)
@@ -90,7 +90,7 @@ for i = 1, (length - 1) / 2 do
 -- ------------------------
 
     count = count + 1
-    print("Durchlauf: " .. count .. " / " .. length)
+    print("Durchlauf: " .. count + 1 .. " / " .. length)
 
     turtle.turnLeft()
     sleep(0.3)
@@ -106,9 +106,9 @@ for i = 1, (length - 1) / 2 do
 -- ------------------------
 
 --Alle 10 Durchlaeufe Inventar leeren
-    if count % 10 == 1 or count  == length + 1 then
+    if count % 10 == 0 or count  == (length + 1) * 2 then
         
-        print("" .. count .. " Durchlaeufe erreicht!")
+        print("" .. count + 1 .. " Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
         
 --!!!!Rueckweg zur Chest!!!!
