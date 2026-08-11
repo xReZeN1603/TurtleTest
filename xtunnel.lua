@@ -109,7 +109,7 @@ for i = 1, (length - 1) / 2 do
 -- ------------------------
 
 --Alle 10 Durchlaeufe Inventar leeren
-    if count % 2 == 0 or count == length then
+    if count % 6 == 0 or count == length then
         
         print("" .. dcount .. " Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
