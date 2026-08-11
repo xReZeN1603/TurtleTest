@@ -71,10 +71,10 @@ end
 print("Vorbereitung abgeschlossen")
 
 --Wiederholungen im Schlangenmuster LENGTH
-for i = 1, (length -1) / 2 do 
+for i = 1, length / 2 do 
 
     count = count + 1
-    print("Durchlauf: " .. count + 1 .. " / " .. length)
+    print("Durchlauf: " .. count .. " / " .. length)
 
     turtle.turnRight()
     sleep(0.3)
@@ -90,7 +90,7 @@ for i = 1, (length -1) / 2 do
 -- ------------------------
 
     count = count + 1
-    print("Durchlauf: " .. count + 1 .. " / " .. length)
+    print("Durchlauf: " .. count .. " / " .. length)
 
     turtle.turnLeft()
     sleep(0.3)
@@ -106,7 +106,7 @@ for i = 1, (length -1) / 2 do
 -- ------------------------
 
 --Alle 10 Durchlaeufe Inventar leeren
-    if count % 10 == 0 or count == (length - 1) then
+    if count % 10 == 0 or count == length then
         
         print("" .. count + 1 .. " Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
