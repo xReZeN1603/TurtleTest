@@ -35,7 +35,6 @@ end
 
 --Einleitung, faehrt vor und zerstoert 4 Bloecke nach rechts und 4 Bloecke nach links
 print("Beginne Tunnel")
-print("Durchlauf: 1 / " .. length)
 sleep(0.3)
 
 digMove()
@@ -68,13 +67,13 @@ for j = 1, 4 do
     digUpDown()
 end
 
-print("Vorbereitung abgeschlossen, beginne Tunnel")
+print("Vorbereitung abgeschlossen")
 
 --Wiederholungen im Schlangenmuster LENGTH
 for i = 1, (length - 1) / 2 do 
 
     count = count + 1
-    print("Durchlauf: " .. count + 1 .. " / " .. length)
+    print("Durchlauf: " .. count .. " / " .. length)
 
     turtle.turnRight()
     sleep(0.3)
@@ -90,7 +89,7 @@ for i = 1, (length - 1) / 2 do
 -- ------------------------
 
     count = count + 1
-    print("Durchlauf: " .. count + 1 .. " / " .. length)
+    print("Durchlauf: " .. count .. " / " .. length)
 
     turtle.turnLeft()
     sleep(0.3)
@@ -106,7 +105,7 @@ for i = 1, (length - 1) / 2 do
 -- ------------------------
 
 --Alle 10 Durchlaeufe Inventar leeren
-    if count % 10 == 0 or count  == (length + 1) * 2 then
+    if count % 10 == 0 or count == length then
         
         print("" .. count + 1 .. " Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
