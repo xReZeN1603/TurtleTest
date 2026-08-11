@@ -238,6 +238,8 @@ count = count + 1
 
         turtle.select(1)
         print("Inventar geleert.")
+        print("Tunnel fertig!")
+        print("Fertig!")
     end
 
 else
@@ -245,5 +247,3 @@ else
     print("Fertig!")
 
 end
-
-print("Fertig!")
