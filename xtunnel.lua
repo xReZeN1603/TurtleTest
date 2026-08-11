@@ -74,7 +74,7 @@ print("Vorbereitung abgeschlossen")
 for i = 1, length / 2 do 
 
     count = count + 1
-    print("Durchlauf: " .. count .. " / " .. length - 1)
+    print("Durchlauf: " .. count + 1 .. " / " .. length)
 
     turtle.turnRight()
     sleep(0.3)
@@ -90,7 +90,7 @@ for i = 1, length / 2 do
 -- ------------------------
 
     count = count + 1
-    print("Durchlauf: " .. count .. " / " .. length -1)
+    print("Durchlauf: " .. count + 1 .. " / " .. length)
 
     turtle.turnLeft()
     sleep(0.3)
