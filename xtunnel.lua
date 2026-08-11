@@ -88,24 +88,44 @@ for i = 1, length / 2 do
         digUpDown()
     end
 -- ------------------------
-    if count < length then --<
 
-        count = count + 1
-        print("Durchlauf: " .. count .. " / " .. length)
+    count = count + 1
+    print("Durchlauf: " .. count .. " / " .. length)
 
-        turtle.turnLeft()
-        sleep(0.3)
+    turtle.turnLeft()
+    sleep(0.3)
+    digMove()
+    digUpDown()
+    turtle.turnLeft()
+    sleep(0.3)
+
+    for j = 1, 8 do
         digMove()
         digUpDown()
-        turtle.turnLeft()
-        sleep(0.3)
-
-        for j = 1, 8 do
-            digMove()
-            digUpDown()
-        end
-    end -- <
+    end
 -- ------------------------
+
+
+    
+end
+
+if count < length then
+
+count = count + 1
+    print("Durchlauf: " .. count .. " / " .. length)
+
+    turtle.turnRight()
+    sleep(0.3)
+    digMove()
+    digUpDown()
+    turtle.turnRight()
+    sleep(0.3)
+
+    for j = 1, 8 do
+        digMove()
+        digUpDown()
+    end
+end
 
 --Alle 10 Durchlaeufe Inventar leeren
     if count % 10 == 0 or count == length then
@@ -182,7 +202,5 @@ for i = 1, length / 2 do
         end
 
     end
-    
-end
 
 print("Fertig!")
