@@ -200,7 +200,7 @@ count = count + 1
         digUpDown()
     end
 
-    if count % 10 == 0 or count == length then
+    if count == length then
         
         print("" .. count .. " Durchlaeufe erreicht!")
         print("Inventar wird geleert.")
@@ -219,7 +219,7 @@ count = count + 1
         turtle.turnLeft()
         sleep(0.3)
 
-        for j = 1, i * 2 do
+        for j = 1, count do
             digMove()
             sleep(0.3)
         end
