@@ -70,7 +70,7 @@ end
 print("Vorbereitung abgeschlossen")
 
 --Wiederholungen im Schlangenmuster LENGTH
-for i = 1, (length - 1) / 2 do 
+for i = 1, length / 2 do 
 
     count = count + 1
     print("Durchlauf: " .. count .. " / " .. length)
