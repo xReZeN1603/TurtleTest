@@ -105,27 +105,6 @@ for i = 1, length / 2 do
     end
 -- ------------------------
 
--- <<<<<<
-    
-end
-
-if count <= length then
-
-count = count + 1
-    print("Durchlauf: " .. count .. " / " .. length)
-
-    turtle.turnRight()
-    sleep(0.3)
-    digMove()
-    digUpDown()
-    turtle.turnRight()
-    sleep(0.3)
-
-    for j = 1, 8 do
-        digMove()
-        digUpDown()
-    end
-
 --Alle 10 Durchlaeufe Inventar leeren
     if count % 10 == 0 or count == length then
         
@@ -201,6 +180,70 @@ count = count + 1
         end
 
     end
+    
+end
+
+if count < length then
+
+count = count + 1
+    print("Durchlauf: " .. count .. " / " .. length)
+
+    turtle.turnRight()
+    sleep(0.3)
+    digMove()
+    digUpDown()
+    turtle.turnRight()
+    sleep(0.3)
+
+    for j = 1, 8 do
+        digMove()
+        digUpDown()
+    end
+
+    if count % 10 == 0 or count == length then
+        
+        print("" .. count .. " Durchlaeufe erreicht!")
+        print("Inventar wird geleert.")
+        
+--!!!!Rueckweg zur Chest!!!!
+        turtle.turnLeft()
+        sleep(0.3)
+        turtle.turnLeft()
+        sleep(0.3)
+
+        for j = 1, 4 do
+            digMove()
+            sleep(0.3)
+        end
+
+        turtle.turnLeft()
+        sleep(0.3)
+
+        for j = 1, i * 2 do
+            digMove()
+            sleep(0.3)
+        end
+
+        turtle.down()
+        sleep(0.3)
+        turtle.forward()
+        sleep(0.3)
+
+    --Items abladen
+        for slot = 1, 16 do 
+            turtle.select(slot)
+            turtle.drop()
+            sleep(0.3)
+        end
+
+        turtle.select(1)
+        print("Inventar geleert.")
+    end
+
+else
+
+    print("Fertig!")
+
 end
 
 print("Fertig!")
