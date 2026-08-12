@@ -1,4 +1,4 @@
-wget https://raw.githubusercontent.com/xReZeN1603/TurtleTest/main/QuarryTurtle.lua qturtle
+-- wget https://raw.githubusercontent.com/xReZeN1603/TurtleTest/main/QuarryTurtle.lua qturtle
 -- START:
 -- xmine TIEFE LÄNGE BREITE
 --
