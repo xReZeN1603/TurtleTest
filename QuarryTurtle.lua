@@ -98,8 +98,8 @@ local input = read()
 local depth, length, width = input:match("(%d+)%s+(%d+)%s+(%d+)")
 
 depth = tonumber(depth)
-length = tonumber(length)
-width = tonumber(width)
+length = tonumber(length) - 1
+width = tonumber(width) - 1
 
 if not depth or not length or not width then
     print("Fehlerhafte Eingabe!")
