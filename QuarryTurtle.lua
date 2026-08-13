@@ -102,7 +102,7 @@ for k = 1, depth do
 
   turtle.turnLeft()
   sleep(0.3)
-  turtl.turnLeft()
+  turtle.turnLeft()
 
 end
 
