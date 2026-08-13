@@ -1,15 +1,15 @@
--- wget https://raw.githubusercontent.com/xReZeN1603/TurtleTest/main/QuarryTurtle.lua qturtle
--- START:
--- xmine TIEFE LÄNGE BREITE
+-- DOWNLOAD: wget https://raw.githubusercontent.com/xReZeN1603/TurtleTest/main/QuarryTurtle.lua qturtle
 --
--- Beispiel:
--- qturtle TIEFE x LAENGE x BREITE
+-- START: qturtle
+--
+-- EINGABE: TIEFE x LAENGE x BREITE
 --
 -- Chest steht direkt hinter der Turtle.
 
 local Y = 0
 local count = 0
 
+--Blacklisted Items, werden entsorgt
 local trashItems = {
     ["minecraft:dirt"] = true,
     ["minecraft:grass_block"] = true,
@@ -25,6 +25,7 @@ local trashItems = {
     ["minecraft:cobbled_deepslate"] = true,
 }
 
+-- Items auf Blacklist entfernen
 local function emptyTrash()
     
     print("Pruefe Inventar")
@@ -67,6 +68,7 @@ local function digMove()
 
 end
 
+--Wartet bis abgebaut ist, faehrt 1 runter
 local function digMoveDown()
     turtle.digDown()
     sleep(0.1)
@@ -78,6 +80,7 @@ local function digMoveDown()
     
 end
 
+--Wartet bis abgebaut ist, faehrt 1 hoch
 local function digMoveUp()
     turtle.digUp()
     sleep(0.1)
@@ -114,7 +117,7 @@ print("Breite: " .. width + 1)
 sleep(0.5)
 
 --ANFANG PROGRAMM
---<<<<<<<<<<<<<<<<<<<<<<<<<Tiefe
+--<<<<<<<<<<<<<<<<<<<<<<<<< k Tiefe
 for k = 1, depth do
 
   digMoveDown()
@@ -127,14 +130,14 @@ for k = 1, depth do
         
     end
     
-
+--<<<<<<<<<<<<<<<<<<<<<<<<<< i Laenge
   for i = 1, length do
 
     digMove()
 
   end
 
-----<<<<<<<<<<<<<<<<<<<<<<<<Breite
+----<<<<<<<<<<<<<<<<<<<<<<<< j Breite
     
   for j = 1, width / 2 do
 
@@ -172,8 +175,6 @@ for k = 1, depth do
   
   end
     
---<<<<<<<<<<<<<<<<<<<<<<<<<<
-
     
 --<<<<<<<<<<<<<<<<<<<<<<<<<<RUECKWEG
 
@@ -208,6 +209,8 @@ for k = 1, depth do
     
 -- FLÄCHE WEG, TURTLE STEHT VOR KISTE und lagert Items
     if count % 20 == 0 or count == depth then
+        print("Durchlauf" .. count .. " / " .. depth .. "erreicht")
+        print("Lagere Items")
 
         --<<<<<<RÜCKWEG ZUR CHEST
 
@@ -238,33 +241,10 @@ for k = 1, depth do
         
     end
 
-        
+-- Wieder in Startrichtung begeben
   turtle.turnLeft()
   sleep(0.1)
   turtle.turnLeft()
 
         
 end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
