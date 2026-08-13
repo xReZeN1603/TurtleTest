@@ -132,7 +132,7 @@ for k = 1, depth do
         end
     else
 
-        print("Durchgang 1 / " .. depth .. )
+        print("Durchlauf: 1 / " .. depth)
         
     end
 
