@@ -109,8 +109,8 @@ end
 
 print("")
 print("Tiefe: " .. depth)
-print("Laenge: " .. length)
-print("Breite: " .. width)
+print("Laenge: " .. length + 1)
+print("Breite: " .. width + 1)
 sleep(0.5)
 
 --ANFANG PROGRAMM
