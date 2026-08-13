@@ -29,7 +29,7 @@ local function emptyTrash()
     
     print("Pruefe Inventar")
 
-    for slot 1, 16 do
+    for slot = 1, 16 do
 
         local item = turtle.getItemDetail(slot)
 
