@@ -157,9 +157,10 @@ for k = 1, depth do
             turtle.select(slot)
             turtle.drop()
             sleep(0.1)
-            turtle.select(1)
-            print("Inventar geleert.")
         end
+
+        turtle.select(1)
+        print("Inventar geleert.")
 
         for u = 1, Y do
           digMoveDown()
