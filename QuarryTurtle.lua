@@ -13,6 +13,8 @@ local depth = tonumber(args[1])
 local length = tonumber(args[2])
 local width = tonumber(args[3])
 
+local count = 0
+
 --Wartet bis abgebaut ist, faehrt 1 vor
 local function digMove()
     turtle.dig()
@@ -86,6 +88,9 @@ for k = 1, depth do
       sleep(0.1)
 
     end
+
+        turtle.digDown()
+        sleep(0.1)
   
   end
     
@@ -93,7 +98,8 @@ for k = 1, depth do
 
     
 --<<<<<<<<<<<<<<<<<<<<<<<<<<RUECKWEG
-    
+
+  count = count + 1  
   turtle.turnLeft()
   sleep(0.1)
 
@@ -120,10 +126,13 @@ for k = 1, depth do
         for slot = 1, 16 do
             trutle.select(slot)
             turtle.drop()
-            sleep(0.3)
+            sleep(0.1)
             turtle.select(1)
             print("Inventar geleert.")
         end
+    else
+
+        print("Durchgang 1 / " .. depth .. )
         
     end
 
