@@ -13,6 +13,7 @@ local depth = tonumber(args[1])
 local length = tonumber(args[2])
 local width = tonumber(args[3])
 
+local Y = 0
 local count = 0
 
 --Wartet bis abgebaut ist, faehrt 1 vor
@@ -42,16 +43,30 @@ local function digMoveDown()
     
 end
 
+local function digMoveUp()
+    turtle.digUp()
+    sleep(0.1)
+
+    while not turtle.up() do
+        turtle.digUp()
+        sleep(0.1)
+    end
+
+end
+
+
 --ANFANG PROGRAMM
 --<<<<<<<<<<<<<<<<<<<<<<<<<Tiefe
 
 for k = 1, depth do
 
   digMoveDown()
+  Y = Y + 1
 
     if count >= 1 then
 
         digMoveDown()
+        Y = Y + 1
         
     end
     
@@ -127,27 +142,42 @@ for k = 1, depth do
   end
     
 -- FLÄCHE WEG, TURTLE STEHT VOR KISTE
-    if count % 10 == 0 or count == length then
+    if count % 2 == 0 or count == depth then
 
+        --<<<<<<RÜCKWEG ZUR CHEST
+
+        for u = 1, Y do
+            digMoveUp()
+            sleep(0.1)
+        end
+
+        
+--<<<<<<<ITEMS ABLADEN
         for slot = 1, 16 do
-            trutle.select(slot)
+            turtle.select(slot)
             turtle.drop()
             sleep(0.1)
             turtle.select(1)
             print("Inventar geleert.")
         end
+
+        for u = 1, Y do
+          digMoveDown()
+          sleep(0.1)
+        end
+        
     else
 
-        print("Durchlauf: 1 / " .. depth)
+        print("Durchlauf: " ..count .. " / " .. depth)
         
     end
 
         
-
   turtle.turnLeft()
   sleep(0.1)
   turtle.turnLeft()
 
+        
 end
 
 
