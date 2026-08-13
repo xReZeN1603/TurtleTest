@@ -29,16 +29,23 @@ local function digMove()
 
 end
 
+local function digMoveDown()
+    turtle.digDown()
+    sleep(0.1)
 
+    while not turtle.down() do
+        turtle.digDown()
+        sleep(0.1)
+    end
+    
+end
 
--- VORBEREITUNG
+--ANFANG PROGRAMM
+--<<<<<<<<<<<<<<<<<<<<<<<<<Tiefe
 
 for k = 1, depth do
 
-  turtle.digDown()
-  sleep(0.1)
-  turtle.down()
-  sleep(0.1)
+  digMoveDown()
 
 
   for i = 1, length do
@@ -47,12 +54,16 @@ for k = 1, depth do
 
   end
 
-----<<<<<Breite
+----<<<<<<<<<<<<<<<<<<<<<<<<Breite
+    
   for j = 1, width / 2 do
 
     turtle.turnRight()
+    sleep(0.1)
     digMove()
+    sleep(0.1)
     turtle.turnRight()
+    sleep(0.1)
 
     for i = 1, length do 
 
@@ -77,7 +88,12 @@ for k = 1, depth do
     end
   
   end
+    
+--<<<<<<<<<<<<<<<<<<<<<<<<<<
 
+    
+--<<<<<<<<<<<<<<<<<<<<<<<<<<RUECKWEG
+    
   turtle.turnLeft()
   sleep(0.1)
 
@@ -88,7 +104,8 @@ for k = 1, depth do
 
   end
 
-  turtle.turnLeft()
+    turtle.turnLeft()
+    sleep(0.1)
 
   for i = 1, length do
 
@@ -96,12 +113,21 @@ for k = 1, depth do
     sleep(0.1)
 
   end
+    
+-- FLÄCHE WEG, TURTLE STEHT VOR KISTE
+    if count % 10 == 0 or count == length then
 
-    turtle.digDown()
-    sleep(0.1)
+        for slot = 1, 16 do
+            trutle.select(slot)
+            turtle.drop()
+            sleep(0.3)
+            turtle.select(1)
+            print("Inventar geleert.")
+        end
+        
+    end
 
-
--- FLÄCHE WEG, STEHT VOR KISTE
+        
 
   turtle.turnLeft()
   sleep(0.1)
