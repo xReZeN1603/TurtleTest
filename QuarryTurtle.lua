@@ -3,18 +3,53 @@
 -- xmine TIEFE LÄNGE BREITE
 --
 -- Beispiel:
--- xmine 20 50 9
+-- qturtle TIEFE x LAENGE x BREITE
 --
 -- Chest steht direkt hinter der Turtle.
 
-local args = {...}
-
-local depth = tonumber(args[1])
-local length = tonumber(args[2])
-local width = tonumber(args[3])
-
 local Y = 0
 local count = 0
+
+local trashItems = {
+    ["minecraft:dirt"] = true,
+    ["minecraft:grass_block"] = true,
+    ["minecraft:cobblestone"] = true,
+    ["minecraft:netherrack"] = true,
+    ["minecraft:gravel"] = true,
+    ["minecraft:sand"] = true,
+    ["minecraft:granite"] = true,
+    ["minecraft:diorite"] = true,
+    ["minecraft:andesite"] = true,
+    ["minecraft:tuff"] = true,
+    ["minecraft:deepslate"] = true,
+    ["minecraft:cobbled_deepslate"] = true,
+}
+
+local function emptyTrash()
+    
+    print("Pruefe Inventar")
+
+    for slot 1, 16 do
+
+        local item = turtle.getItemDetail(slot)
+
+        if item and trashItems[item.name] then
+
+            print("Entferne " ..item.name)
+
+            turtle.select(slot)
+            turtle.dropDown()
+            sleep(0.1)
+
+        end
+
+    end
+
+    turtle.select(1)
+    print("Muell entfernt")
+
+end
+
 
 --Wartet bis abgebaut ist, faehrt 1 vor
 local function digMove()
@@ -57,6 +92,29 @@ end
 
 --ANFANG PROGRAMM
 --<<<<<<<<<<<<<<<<<<<<<<<<<Tiefe
+print("QuarryTurtle: TIEFE x LAENGE x BREITE")
+write("> ")
+
+local input = read()
+
+local depth, length, width = input:match("(%d+)%s+(%d+)%s+(%d+)")
+
+depth = tonumber(depth)
+length = tonumber(length)
+width = tonumber(width)
+
+if not depth or not length or not width then
+    print("Fehlerhafte Eingabe!")
+    print("Beispiel 100 10 10")
+    return
+end
+
+print("")
+print("Tiefe: " .. depth)
+print("Laenge: " .. length)
+print("Breite: " .. width)
+sleep(0.5)
+
 
 for k = 1, depth do
 
@@ -140,9 +198,17 @@ for k = 1, depth do
     sleep(0.1)
 
   end
+
+    --Trash Items wegschmeissen
+    if count % 5 == 0 then
+
+       emptyTrash()
+
+    end
+        
     
--- FLÄCHE WEG, TURTLE STEHT VOR KISTE
-    if count % 2 == 0 or count == depth then
+-- FLÄCHE WEG, TURTLE STEHT VOR KISTE und lagert Items
+    if count % 20 == 0 or count == depth then
 
         --<<<<<<RÜCKWEG ZUR CHEST
 
