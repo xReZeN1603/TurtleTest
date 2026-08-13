@@ -90,8 +90,6 @@ local function digMoveUp()
 end
 
 
---ANFANG PROGRAMM
---<<<<<<<<<<<<<<<<<<<<<<<<<Tiefe
 print("QuarryTurtle: TIEFE x LAENGE x BREITE")
 write("> ")
 
@@ -115,7 +113,8 @@ print("Laenge: " .. length)
 print("Breite: " .. width)
 sleep(0.5)
 
-
+--ANFANG PROGRAMM
+--<<<<<<<<<<<<<<<<<<<<<<<<<Tiefe
 for k = 1, depth do
 
   digMoveDown()
