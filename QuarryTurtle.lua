@@ -49,6 +49,12 @@ for k = 1, depth do
 
   digMoveDown()
 
+    if count >= 1 then
+
+        digMoveDown()
+        
+    end
+    
 
   for i = 1, length do
 
