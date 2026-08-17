@@ -10,12 +10,12 @@ local w, h = m.getSize()
 
 -- Obere Zeile
 m.setCursorPos(1, 1)
-m.write("+---------------+")
+m.write("+-------------------------+")
 
 -- Mittlere Zeile
-m.setCursorPos(1, math.floor(h / 2))
-m.write("         Lagerraum")
+m.setCursorPos(1, math.floor(h / 3))
+m.write("|        Lagerraum        |")
 
 -- Untere Zeile
 m.setCursorPos(1, h)
-m.write("+---------------+")
+m.write("+-------------------------+")
