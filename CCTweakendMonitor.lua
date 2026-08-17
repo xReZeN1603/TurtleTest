@@ -1,3 +1,6 @@
+Download: wget https://github.com/xReZeN1603/TurtleTest/main/CCTweakendMonitor.lua
+
+
 m=peripheral.find("monitor")
 m.setTextScale(2)
 m.clear()
