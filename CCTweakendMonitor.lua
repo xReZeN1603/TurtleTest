@@ -1,8 +1,10 @@
-Download: wget https://raw.githubusercontent.com/xReZeN1603/TurtleTest/main/CCTweakendMonitor.lua m1
+-- Download: wget https://raw.githubusercontent.com/xReZeN1603/TurtleTest/main/CCTweakendMonitor.lua m1
 
 m=peripheral.find("monitor")
-m.setTextScale(2)
+m.setBackgroundColor(colors.black)
 m.clear()
+
+m.setTextScale(2)
 
 local w,h=m.getSize()
 local text="Lagerraum"
@@ -17,7 +19,7 @@ m.write("───────────")
 m.setCursorPos(x-1,y)
 m.write("│")
 
-m.setCursorPos(x+ #text,y)
+m.setCursorPos(x+#text,y)
 m.write("│")
 
 m.setCursorPos(x-1,y+1)
