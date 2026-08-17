@@ -16,13 +16,6 @@ m.setTextColor(colors.white)
 m.setCursorPos(x-1,y-1)
 m.write("+" .. string.rep("-",#text) .. "+")
 
--- Seiten
-m.setCursorPos(x-1,y)
-m.write("|")
-
-m.setCursorPos(x+#text,y)
-m.write("|")
-
 -- Unterer Rand
 m.setCursorPos(x-1,y+1)
 m.write("+" .. string.rep("-",#text) .. "+")
