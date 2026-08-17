@@ -10,7 +10,7 @@ local w, h = m.getSize()
 
 -- Obere Zeile
 m.setCursorPos(1, 1)
-m.write("+ " .. string.rep("-",#text) .. " +")
+m.write("+ " .. string.rep("-+")
 
 -- Mittlere Zeile
 m.setCursorPos(1, math.floor(h / 2))
@@ -18,4 +18,4 @@ m.write("           Lagerraum")
 
 -- Untere Zeile
 m.setCursorPos(1, h)
-m.write("+ " .. string.rep("-",#text) .. " +")
+m.write("+ " .. string.rep("-")
