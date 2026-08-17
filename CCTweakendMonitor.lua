@@ -1,26 +1,21 @@
 -- Download: wget https://raw.githubusercontent.com/xReZeN1603/TurtleTest/main/CCTweakendMonitor.lua m1
 
-m=peripheral.find("monitor")
-m.setBackgroundColor(colors.black)
-m.setTextScale(2)
+local m = peripheral.find("monitor")
+
+m.setTextScale(1)
+
 m.clear()
 
-local w,h=m.getSize()
-local text="Lagerraum"
-local x=math.floor((w-#text)/2)+1
-local y=math.floor(h/2)
+local w, h = m.getSize()
 
-m.setTextColor(colors.white)
+-- Obere Zeile
+m.setCursorPos(1, 1)
+m.write("──────── TITEL ────────")
 
--- Oberer Rand
-m.setCursorPos(x-1,y-1)
-m.write("+" .. string.rep("-",#text) .. "+")
+-- Mittlere Zeile
+m.setCursorPos(1, math.floor(h / 2))
+m.write("       HAUPTTEXT")
 
--- Unterer Rand
-m.setCursorPos(x-1,y+1)
-m.write("+" .. string.rep("-",#text) .. "+")
-
--- Text
-m.setTextColor(colors.lime)
-m.setCursorPos(x,y)
-m.write(text)
+-- Untere Zeile
+m.setCursorPos(1, h)
+m.write("──────── Status ────────")
