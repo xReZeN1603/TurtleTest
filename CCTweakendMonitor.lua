@@ -10,20 +10,20 @@ local w, h = m.getSize()
 
 -- Obere Zeile
 m.setCursorPos(1, 1)
-m.write("+-------------------------+")
+m.write("+---------------------------+")
 
 -- Mittlere Zeile
 m.setCursorPos(1, math.floor(h / 2) + 1)
 
 m.setTextColor(colors.white)
-m.write("|        ")
+m.write("|         ")
 
 m.setTextColor(colors.green)
 m.write("Lagerraum")
 
 m.setTextColor(colors.white)
-m.write("        |")
+m.write("         |")
 
 -- Untere Zeile
 m.setCursorPos(1, h)
-m.write("+-------------------------+")
+m.write("+---------------------------+")
