@@ -2,9 +2,8 @@
 
 m=peripheral.find("monitor")
 m.setBackgroundColor(colors.black)
-m.clear()
-
 m.setTextScale(2)
+m.clear()
 
 local w,h=m.getSize()
 local text="Lagerraum"
@@ -13,18 +12,22 @@ local y=math.floor(h/2)
 
 m.setTextColor(colors.white)
 
+-- Oberer Rand
 m.setCursorPos(x-1,y-1)
-m.write("───────────")
+m.write("+" .. string.rep("-",#text) .. "+")
 
+-- Seiten
 m.setCursorPos(x-1,y)
-m.write("│")
+m.write("|")
 
 m.setCursorPos(x+#text,y)
-m.write("│")
+m.write("|")
 
+-- Unterer Rand
 m.setCursorPos(x-1,y+1)
-m.write("───────────")
+m.write("+" .. string.rep("-",#text) .. "+")
 
+-- Text
 m.setTextColor(colors.lime)
 m.setCursorPos(x,y)
 m.write(text)
